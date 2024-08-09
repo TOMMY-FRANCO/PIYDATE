@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dating Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PIYDATE</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to PIYDATE</h2>
+            <p>Find your perfect match today!</p>
+            <section id="login">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <section id="register">
+                    <h2>Register</h2>
+                    <form id="registrationForm">
+                        <input type="text" id="regUsername" placeholder="Username" required>
+                        <input type="email" id="regEmail" placeholder="Email" required>
+                        <input type="password" id="regPassword" placeholder="Password" required>
+                        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </section>
+            </section>
+            
+            <section id="matchFinder">
+                <h2>Find Your Match</h2>
+                <button id="findMatchBtn">Find a Match</button>
+                <p id="matchResult"></p>
+            </section>
+        </section>
+
+        <section id="features">
+            <h2>Our Features</h2>
+            <ul>
+                <li>Create a detailed profile</li>
+                <li>Search for compatible matches</li>
+                <li>Send and receive messages</li>
+                <li>View potential matches</li>
+            </ul>
+        </section>
+
+        <section id="preferences" style="display: none;">
+            <h2>Your Preferences</h2>
+            <form id="preferencesForm">
+                <label for="ageRange">Preferred Age Range:</label>
+                <select id="ageRange">
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46+">46+</option>
+                </select>
+        
+                <label for="interests">Interests (select multiple):</label>
+                <select id="interests" multiple>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="movies">Movies</option>
+                    <option value="travel">Travel</option>
+                    <option value="cooking">Cooking</option>
+                </select>
+        
+                <label for="lookingFor">Looking for:</label>
+                <select id="lookingFor">
+                    <option value="friendship">Friendship</option>
+                    <option value="dating">Dating</option>
+                    <option value="longTerm">Long-term Relationship</option>
+                </select>
+        
+                <button type="submit">Save Preferences</button>
+            </form>
+        </section>
+        <section id="messaging" style="display: none;">
+            <h2>Messages</h2>
+            <div id="conversationList"></div>
+            <div id="chatWindow" style="display: none;">
+                <h3 id="chatPartner"></h3>
+                <div id="messageList"></div>
+                <form id="messageForm">
+                    <input type="text" id="messageInput" placeholder="Type a message..." required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PIYDATE. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
